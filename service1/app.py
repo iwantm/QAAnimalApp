@@ -5,7 +5,7 @@ import requests
 import random
 
 app = Flask(__name__)
-api = "http://localhost:5001"
+api = "http://service2:5001"
 
 
 @app.route('/')

@@ -2,15 +2,17 @@ version: '3.7'
 
 services: 
   service1:
-    build: /service1/.
-    image: 
+    build: ./service1/.
+    image: service1
+    replicas: 3
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
-  service 2:
-    build: /service2/.
-    image:
+  service2:
+    build: ./service2/.
+    image: service2
+    replicas: 3
     ports:
     - target: 5001
       published: 5001
