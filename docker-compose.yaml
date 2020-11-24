@@ -3,7 +3,7 @@ version: '3.7'
 services: 
   service1:
     build: ./service1/.
-    image: service1
+    image: iwantm/AA:service1
     deploy:
       replicas: 3
     ports:
@@ -12,7 +12,7 @@ services:
       protocol: tcp
   service2:
     build: ./service2/.
-    image: service2
+    image: iwantm/AA:service2
     deploy:
       replicas: 3
     ports:
