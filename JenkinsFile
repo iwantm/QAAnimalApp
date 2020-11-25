@@ -15,10 +15,10 @@ pipeline{
                     sh "./scripts/build-images.sh"
                 }
             }
-            // stage('Deploy App'){
-            //     steps{
-            //         sh "docker-compose pull && docker-compose up -d"
-            //     }
-            // }
+            stage('Deploy App'){
+                steps{
+                    sh "./scripts/run.sh"
+                }
+            }
         }
 }
