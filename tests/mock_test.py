@@ -13,15 +13,12 @@ class TestBase(TestCase):
 
 
 class TestResponse(TestBase):
-    def test_home_get(self):
-        response = self.client.get(url_for('index'))
-        self.assertEqual(response.status_code, 200)
 
     def test_get(self):
-        # with patch('requests.get') as g:
-        # with patch('requests.post') as p:
-        g.return_value.json.return_value = {"animal": "frog"}
-        p.return_value.json.return_value = {"sound": "ribbit"}
-        response = self.client.get(url_for('index'))
-        self.assertIn(b'frog', response.data)
-        self.assertIn(b'ribbit', response.data)
+        with patch('requests.get') as g:
+            with patch('requests.post') as p:
+                g.return_value.json.return_value = {"animal": "frog"}
+                p.return_value.json.return_value = {"sound": "ribbit"}
+                response = self.client.get(url_for('index'))
+                self.assertIn(b'frog', response.data)
+                self.assertIn(b'ribbit', response.data)
