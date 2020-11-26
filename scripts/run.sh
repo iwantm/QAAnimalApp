@@ -5,7 +5,7 @@ if [ -d "QAAnimalApp" ]; then
     cd QAAnimalApp
     git pull
 else
-    git clone https://github.com:iwantm/QAAnimalApp.git
+    git clone https://github.com/iwantm/QAAnimalApp.git
     cd QAAnimalApp/
 fi 
 docker-compose pull
