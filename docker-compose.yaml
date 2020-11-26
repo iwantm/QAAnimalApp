@@ -3,7 +3,7 @@ version: '3.7'
 services: 
   service1:
     build: ./service1/.
-    image: iwantm/animalapp:service1
+    image: animalapp-docker:8082/animalapp:service1
     deploy:
       replicas: 3
     ports:
@@ -12,7 +12,7 @@ services:
       protocol: tcp
   service2:
     build: ./service2/.
-    image: iwantm/animalapp:service2
+    image: animalapp-docker:8082/animalapp:service2
     deploy:
       replicas: 3
     ports:
